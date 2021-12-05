@@ -1,0 +1,149 @@
+:root {
+	--main-bg-col: rgb(124,39,33);
+	--light-bg-col: lightgray;
+	--dark-bg-col: darkgray;
+}
+
+body {
+	background-color: var(--main-bg-col);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+button {
+	border: none;
+	outline: 0;
+}
+
+#body-container {
+	width: 95vw;
+	height: 95vh;
+	margin-top: 1vh;
+
+	display: flex;
+	flex-direction: row;
+
+	border: 2px black solid;
+	background-color: var(--light-bg-col);
+}
+
+#employee-container {
+	width: 20vw;
+	height: 95vh;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	background-color: var(--dark-bg-col);
+}
+#tx-employee {
+	width: 90%;
+	height: 42vh;
+	overflow: scroll;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	border: 2px black solid;
+}
+#np-employee {
+	width: 90%;
+	height: 42vh;
+	overflow: scroll;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	border: 2px black solid;
+}
+.btn-employee{
+	width: 100%;
+	padding: 4px;
+
+	background-color: var(--light-bg-col);
+
+	color: black;
+	border: 1px solid black;
+}
+.btn-employee:hover {
+	background-color: var(--dark-bg-col)!important;
+	border-width: 2px;
+	border-color: var(--main-bg-col);
+	color: white;
+}
+
+.tab-btn-container {
+	width: 75vw;
+	height: 30px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	background-color: var(--light-bg-col);
+}
+.tab-btn {
+	height: 100%;
+	padding: 5;
+	border-top: 1px solid black;
+	border-right: 2px solid black;
+	color: black;
+	background-color: var(--light-bg-col);
+}
+.tab-btn:focus {
+	color: white;
+	background-color: var(--dark-bg-col);
+}
+#tabs {
+	height: 100%;
+	display: flex;
+	justify-content: left;
+}
+#employee-current {
+	width: 20vw;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+.tab-content {
+	width: 100%;
+	height: 95%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#tot-header {
+	background-color:var(--main-bg-col); 
+	width: 100%;
+	text-align: center; 
+	color: white;
+}
+#totals-data {
+	width: 95%;
+	height: 95%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	border: 2px solid black;
+	background-color: var(--light-bg-col);
+}
+#tot-table-container{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+#tot-table {
+	width: 60%;
+}
+
+

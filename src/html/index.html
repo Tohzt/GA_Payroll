@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../style/index.css">
+		<link rel="stylesheet" href="../style/table.css">
+	</head>
+	<body>
+		<div id="body-container">
+			<div id="employee-container">
+				<span>Texas</span>
+				<div id="tx-employee"></div>
+				<span>Newport</span>
+				<div id="np-employee"></div>
+			</div>
+			<div id="data-container">
+				<div class="tab-btn-container">
+					<div id='tabs'>
+						<button class="tab-btn" onClick="tab_btn(this.id)" id="totals-tab">Totals</button>
+						<button class="tab-btn" onClick="tab_btn(this.id)" id="week-1-tab">Week 1</button>
+						<button class="tab-btn" onClick="tab_btn(this.id)" id="week-2-tab">Week 2</button>
+						<!-- <button onClick="set_table()">Test</button> -->
+					</div>
+					<div id="employee-current">
+						<span id='cur-employee'>--Select Employee--</span>
+					</div>
+				</div>
+
+				<div class="tab-content">
+					<div id="totals-data">
+						<span id = tot-header>Totals</span>
+						<div id='tot-table-container'>
+							<table id='tot-table'>
+								<tr>
+									<th class='col-1'>Pay Type</th>
+									<th class='col-1'>Total</th>
+								</tr>
+								<tr>
+									<td>GAI Gondolier Hours</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>GAI Tips</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>Office Hours</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>Training Hours</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>Other 1 - 9180</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>Other 2 - 9016</td>
+									<td>0</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div id='week-1-data'>
+						<span id='wk-header'>Week One</span>
+						<table>
+							<tr>
+								<th class='col-1'>Cruise Type</th>
+								<th class='col-2'>Mon</th>
+								<th class='col-3'>Tue</th>
+								<th class='col-4'>Wed</th>
+								<th class='col-5'>Thu</th>
+								<th class='col-6'>Fri</th>
+								<th class='col-7'>Sat</th>
+								<th class='col-8'>Sun</th>
+								<th class='col-9'>Pay Amt.</th>
+								<th class='col-10'>Wkly Totals</th>
+							</tr>
+						</table>
+						<div class='data-table'>
+							<table id='wk-1-table'>
+								<tr>
+									<th class='col-1'>dates</th>
+									<td class="col-2">0</td>
+									<td class="col-3">0</td>
+									<td class="col-4">0</td>
+									<td class="col-5">0</td>
+									<td class="col-6">0</td>
+									<td class="col-7">0</td>
+									<td class="col-8">0</td>
+									<td class="col-9">0</td>
+									<td class="col-10">0</td>
+									<tr>
+										<th class='col-1'>Amore</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Amore Plus</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Newport Lunch</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Newport Lunch Plus</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Antipasto</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Antipasto Plus</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Dinner </th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Bellissimo Dinner</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Dessert</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Dessert Plus</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Gondola Experience</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Dolce Experience</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Other gondoliering hours</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Photography</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Tips</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+							</table>
+						</div>
+					</div>
+					<div id='week-2-data'>
+						<span id='wk-header'>Week Two</span>
+						<table>
+							<tr>
+								<th class='col-1'>Cruise Type</th>
+								<th class='col-2'>Mon</th>
+								<th class='col-3'>Tue</th>
+								<th class='col-4'>Wed</th>
+								<th class='col-5'>Thu</th>
+								<th class='col-6'>Fri</th>
+								<th class='col-7'>Sat</th>
+								<th class='col-8'>Sun</th>
+								<th class='col-9'>Pay Amt.</th>
+								<th class='col-10'>Wkly Totals</th>
+							</tr>
+						</table>
+						<div class='data-table'>
+							<table>
+								<tr>
+									<th class='col-1'>dates</th>
+									<td class="col-2">0</td>
+									<td class="col-3">0</td>
+									<td class="col-4">0</td>
+									<td class="col-5">0</td>
+									<td class="col-6">0</td>
+									<td class="col-7">0</td>
+									<td class="col-8">0</td>
+									<td class="col-9">0</td>
+									<td class="col-10">0</td>
+									<tr>
+										<th class='col-1'>Amore</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Amore Plus</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Newport Lunch</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Newport Lunch Plus</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Antipasto</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Antipasto Plus</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Dinner </th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Bellissimo Dinner</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Dessert</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Dessert Plus</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Gondola Experience</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Dolce Experience</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Other gondoliering hours</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Photography</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+									<tr>
+										<th class='col-1'>Tips</th>
+										<td class="col-2">0</td>
+										<td class="col-3">0</td>
+										<td class="col-4">0</td>
+										<td class="col-5">0</td>
+										<td class="col-6">0</td>
+										<td class="col-7">0</td>
+										<td class="col-8">0</td>
+										<td class="col-9">0</td>
+										<td class="col-10">0</td>
+									</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src='../logic/initData.js'></script>
+		<script src='../logic/customTabs.js'></script>
+	</body>
+</html>
