@@ -1,0 +1,22 @@
+.modal {
+	display: none;
+	position: absolute;
+	z-index: 10;
+	background-color:blue;
+	left: 40%;
+	top: 30%;
+	width: 50%;
+	height: 50%;
+	overflow: auto;
+
+}
+
+.close {
+	color: red;
+	float: right;
+	font-size: 28px;
+}
+
+.modal-container {
+	background-color:white;
+}
