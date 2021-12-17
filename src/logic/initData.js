@@ -3,10 +3,12 @@
 let current = '';
 
 init();
+generateTables();
+
 function init() {
 	console.log('initialize data..');
 	const emp_tx = document.getElementById('tx-employee');
-	
+
 	// Build placeholder buttons;
 	for (var i = 0; i < 20; i++) {
 		let btn = document.createElement('button');
@@ -58,6 +60,36 @@ function selectEmployee (e) {
 }
 
 // TODO: Generate Data Tables
+
+function generateTables () {
+	var _headerData = ['Cruise Type','Mon','Tue','Wed','Thu','Fri','Sat','Sun','Pay Amt.','Wkly Totals'];
+	buildTableHeader(_headerData);
+}
+
+function buildTableHeader (_names) {
+	console.log('Building Week-1 DataTable Header..');
+	
+	let div = document.getElementsByClassName('dynamic_dt')[0];
+	let table = document.createElement("table");
+	let row = document.createElement("tr");
+	for (var i = 0; i < _names.length; i++) {
+		let cruiseType = document.createElement("th");
+		var str = "col-";
+		str = str.concat((i+1).toString());
+		cruiseType.setAttribute('class', str);
+		cruiseType.innerHTML = _names[i];
+		row.appendChild(cruiseType)
+	}
+
+	// Push Table
+	table.appendChild(row);
+	div.appendChild(table);
+}
+
+
+
+
+
 
 
 
