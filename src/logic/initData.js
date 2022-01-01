@@ -64,11 +64,14 @@ function selectEmployee (e) {
 function generateTables () {
 	var _headerData = ['Cruise Type','Mon','Tue','Wed','Thu','Fri','Sat','Sun','Pay Amt.','Wkly Totals'];
 	buildTableHeader(_headerData);
+
+	var _bodyDataHeaders = ["Dates", "Amore", "Amore (+)", "NP Lunch", "NP Lunch (+)", "Antipasto", "Antipasto (+)", "Dinner", "Bellissimo Dinner", "Dessert", "Dessert (+)", "Gondola Experience", "Dolce Experience", "Other Gondolier Hours", "Photography", "Tips"];
+	buildTableBody(_bodyDataHeaders, _headerData.length);
 }
 
 function buildTableHeader (_names) {
 	console.log('Building Week-1 DataTable Header..');
-	
+
 	let div = document.getElementsByClassName('dynamic_dt')[0];
 	let table = document.createElement("table");
 	let row = document.createElement("tr");
@@ -86,10 +89,54 @@ function buildTableHeader (_names) {
 	div.appendChild(table);
 }
 
+function buildTableBody(_header, _cols) {
+	console.log('Building Week-1 DataTable Body...');
+
+	let div = document.getElementsByClassName('data-table')[0];
+	let table = document.createElement('table');
 
 
+	_header.forEach((head, index) => {
+		let row = document.createElement('tr');
+		
+		// Build Out TOP Row
+		for (var i = 0; i < _cols; i++) {
+			var str = "col-";
+			str = str.concat((i+1).toString());
 
+			// Add Header
+			if (i == 0) {
+				let rowHeader = document.createElement('th');
+				rowHeader.setAttribute('class', str);
+				rowHeader.innerText = head;
+				row.appendChild(rowHeader);
+			}
+			else {
+				let rowBody = document.createElement('td');
+				rowBody.setAttribute('class', str);
+				rowBody.style.backgroundColor = "green";
+				rowBody.style.cellpadding = 0;
+				rowBody.style.cellspacing = 0;
+				if (head != "Dates") {
+					let cell_btn = document.createElement('button');
+					// TODO: Set Button ID
+					//cell_btn.setAttribute('id', 'Amore-wk1-Mon');
+					cell_btn.setAttribute('class', 'table-btn');
+					cell_btn.addEventListener('click', () => toggle_dataPopup());
+					cell_btn.innerText = 'BTN';
+					rowBody.appendChild(cell_btn);
+				}
+				row.appendChild(rowBody);
+			}
+			// TODO: Update Row Info (Push to Modal)
+		}
+		
+		table.appendChild(row);
+	})
 
+	// Push Table
+	div.appendChild(table);
+}
 
 
 
